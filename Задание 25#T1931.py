@@ -10,12 +10,11 @@ for i in range(0, n):
     a.append(int(input()))
 k = 10000
 for i in range(0, n):
-    if int(a[i]) % 6 != 0:
-        if int(a[i]) < k:
-            k = int(a[i])
+    if a[i] % 6 != 0:
+        if a[i] < k:
+            k = a[i]
 for i in range(0, n):
-    if int(a[i]) % 6 != 0:
+    if a[i] % 6 != 0:
         a.insert(i, k)
-        a.remove(int(a[i + 1]))
-    print(int(a[i]))
-
+        a.remove(a[i + 1])
+    print(a[i])

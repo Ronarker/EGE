@@ -5,11 +5,11 @@ https://yandex.ru/tutor/subject/tag/problems/?ege_number_id=363&tag_id=19
 # целочисленные переменные j и k
 a = []
 n = 6
-for i in range(0, n):
+for i in range(n):
     a.append(int(input()))
 j = 999
 k = []
-for i in range(0, n):
+for i in range(n):
     k.append(a[i] // 100)
     k.append(a[i] // 10 % 10)
     k.append(a[i] % 10)
@@ -17,7 +17,7 @@ for i in range(0, n):
         if a[i] < j:
             j = a[i]
     k.clear()
-for i in range(0, n):
+for i in range(n):
     k.append(a[i] // 100)
     k.append(a[i] // 10 % 10)
     k.append(a[i] % 10)

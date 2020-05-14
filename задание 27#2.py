@@ -21,4 +21,5 @@ for i in range(N):
                 m += 1
             n += 1
         n = 4
+
 print(m)

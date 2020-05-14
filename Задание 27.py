@@ -11,8 +11,7 @@ for i in range(n):
     a.append(int(input()))
 for i in range(n - 1):
     for k in range(i + 1, n):
-        if  (a[i] + a[k]) % m == 0 and (a[i] + a[k]) > b + c:
-            if a[i] > a[k]:
-                c = a[k]
-                b = a[i]
+        if  (a[i] + a[k]) % m == 0 and (a[i] + a[k]) > b + c and a[i] > a[k]:
+            c = a[k]
+            b = a[i]
 print(b, c)

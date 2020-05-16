@@ -8,8 +8,8 @@ z = 4
 for i in range(N):
     a.append(int(input()))
 for i in range(N):
-    while i + z <= N - 1:
-        if (a[i] * a[i + z]) % 3 == 0 and (a[i] + a[i + z]) % 3 != 0:
+    for j in range(i + z, N):
+        if (a[i] * a[j]) % 3 == 0 and (a[i] + a[j]) % 3 != 0:
             m += 1
         z += 1
     z = 4

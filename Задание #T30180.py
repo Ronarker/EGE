@@ -1,4 +1,4 @@
-N = 5
+N = 30
 a = []
 for i in range(0, N):
     a.append(int(input()))

@@ -9,3 +9,4 @@ for i in range(0, N - 1):
     else:
         cnt = 1
 print(cnt)
+# Результат проверки - всё правильно

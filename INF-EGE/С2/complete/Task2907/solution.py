@@ -10,3 +10,4 @@ for i in range(N):
     elif a[i] % 2 != 0 and a[i] > max_odd:
         max_odd = a[i]
 print(max_even - max_odd)
+# Результат проверки - всё правильно

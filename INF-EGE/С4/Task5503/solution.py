@@ -1,14 +1,19 @@
 # Python 3.6
 N = int(input())
 a = []
+r = 'False'
 for i in range(N):
     a.append(int(input()))
-R = 0  # Значение R тоже вводится
+R = int(input())
+if R % 14 != 0:
+    r = 'False'
 for i in range(N - 1):
-    for k in range(i + 1, N):
-        if (a[i] * a[k]) % 14 == 0 and a[i] != a[k] and (a[i] * a[k]) > R: # Сравнивать между собой не надо, в условии сказано, чтобы элементы были разными, т.е. индексы не должны совпадать
-            for z in range(N):
-                if a[i] * a[k] == a[z]: # Что это?
-                    R = a[z]
-print(R)  # Сделай вывод такой же как и в условии задачи
-# Почитай внимательно условие задачи, делай всё так, как описано в задании, иначе на ЕГЭ не зачтут решение
+    if r == 'False':
+        for k in range(i + 1, N):
+            if a[i] * a[k] == R:
+                r = 'True'
+                print(R)
+                break
+if r == 'False':
+    print(0)
+# Программа является решением задания А

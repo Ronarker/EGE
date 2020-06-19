@@ -1,14 +1,12 @@
 N = 30
 a = []
-for i in range(0, N): # 0 можно не указывать, по умолчанию в range первое значение и так 0, т.е. можно указать - range(N)
+for i in range(N):
     a.append(int(input()))
-m = 0  # Где максимум, а где минимум? Называй переменные понятно, например - max_a и min_a
-n = 0
-for i in range(0, N):
-    if a[i] % 2 == 0 and a[i] > m:
-        m = a[i]
-    elif a[i] % 2 != 0 and a[i] > n:
-        n = a[i]
-print(m - n)
-# Сам алгоритм решения задачи правильный, вопросы только в оформлении
-# Прорефактори код, как я в комментах указал и убери мои комментарии
+max_even = 0 
+max_odd = 0
+for i in range(N):
+    if a[i] % 2 == 0 and a[i] > max_even:
+        max_even = a[i]
+    elif a[i] % 2 != 0 and a[i] > max_odd:
+        max_odd = a[i]
+print(max_even - max_odd)

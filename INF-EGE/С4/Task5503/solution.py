@@ -1,18 +1,27 @@
 # Python 3.6
 N = int(input())
-a = []
-r = False
+a14 = 0
+a_max = 0
+a7 = 0
+a2 = 0
 for i in range(N):
-    a.append(int(input()))
+    a = int(input())
+    if a % 14 == 0 and a > a14:
+        a14 = a
+    if a > a_max:
+        a_max = a
+    if a % 7 == 0 and a % 2 != 0:
+        a7 = a
+    if a % 2 == 0 and a % 7 !=  0:
+        a2 = a
 R = int(input())
-for i in range(N - 1):
-    if r == False:
-        for k in range(i + 1, N):
-            if a[i] * a[k] == R: # Тебе надо заново найти R и сравнить его с введенным значением R
-                r = True
-                print(R)
-                break
-if not r: 
-    print(0)
-# Читай условие! Написано выведите сообщение "Вычесленное конрольное значение" и пройден контроль или нет
-# Программа является решением задания А
+if a14 * a_max > a7 * a2:
+    R_ = a14 * a_max
+else:
+    R_ = a7 * a2
+print('Вычисленное контрольное значение:', R_)
+if R == R_:
+    print('Контроль пройден')
+else:
+    print('Контроль не пройден')
+# Решение задания Б
